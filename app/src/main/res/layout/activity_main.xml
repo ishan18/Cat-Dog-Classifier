@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F5"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_frame"
+        app:layout_constraintTop_toBottomOf="@id/classify"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/image"
+            android:scaleType="fitCenter"
+            android:padding="2dp"
+            android:background="@drawable/background_card"
+            android:src="@drawable/upload_image"
+            android:layout_margin="20dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/classify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/image_frame"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#34345B"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/capture"
+        android:text="Capture"
+        android:textColor="#F4F6F5"
+        android:background="@drawable/background_button"
+        app:layout_constraintTop_toBottomOf="@id/image_frame"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/load_image"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/load_image"
+        android:text="Upload"
+        android:textColor="#F4F6F5"
+        android:background="@drawable/background_button"
+        app:layout_constraintTop_toBottomOf="@id/image_frame"
+        app:layout_constraintLeft_toRightOf="@id/capture"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
